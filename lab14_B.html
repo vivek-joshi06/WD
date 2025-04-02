@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_B</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(315deg,white,#D5C7A3,white);
+            height: 130vh;
+        }
+        .content{
+            height: 800px;
+            width: 1000px;
+            margin-top: 60px;
+            margin-left: 250px;
+            background-color: bisque;
+        }
+
+        .left{
+            height: 100%;
+            width: 50%;
+            background-color: whitesmoke;
+            float: left;
+        }
+
+        #bars{
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+        }
+
+        #glass{
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+        }
+
+        #bigImg{
+            height: 600px;
+            width: 350px;
+            border-radius: 15px;
+            margin-left: 90px;
+        }
+
+        #useer{
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+        }
+
+        #boat{
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+        }
+
+        .right{
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            float: right;
+        }
+
+        .back{
+            height: 50px;
+            width: 200px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            color: blue;
+        }
+
+        .lightText{
+            width: 200px;
+            padding-right: 20px;
+            margin-top:20px ;
+            color: white;
+            text-align: center;
+            color: rgba(140, 140, 144,0.5);
+        }
+
+        .colleg{
+            color: white;
+            margin-left: 56px;
+            color: black;
+        }
+
+        .div{
+            margin-top: 20px;
+            margin-left: 56px;
+            font-size: 10px;
+            display: flex;
+            line-height: 20px;
+        }
+
+        .stars{
+            color: orange;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .quality{
+            color: white;
+            margin-left: 56px;
+            color: black;
+            margin-top: 20px;
+        }
+
+        .select{
+            margin-left: 56px;
+            color: black;
+            display: flex;
+        }
+
+        .basic{
+            height: 30px;
+            width: 100px;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgb(239, 239, 239);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .prim{
+            height: 30px;
+            width: 100px;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 30px;
+            /* border-radius: 10px; */
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .style{
+            color: white;
+            margin-left: 56px;
+            margin-top: 30px;
+            color: black;
+        }
+
+        .styleOption{
+            margin-top: 10px;
+            margin-left: 35px;
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .option{
+            height: 30px;
+            width: 100px;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px;
+        }
+
+        .color{
+            color: white;
+            margin-left: 56px;
+            margin-top: 30px;
+            color: black;
+        }
+
+        .colorOption{
+            width: 180px;
+            margin-top: 10px;
+            margin-left: 35px;
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .option2{
+            height: 30px;
+            width: 30px;
+            border: 1px black solid;
+            border-radius: 50%;
+        }
+
+        #colr1{
+            background-color: red;
+        }
+
+        #colr2{
+            background-color: blue;
+        }
+
+        #colr3{
+            background-color: green;
+        }
+
+        #colr4{
+            background-color: yellow;
+        }
+
+        .size{
+            color: white;
+            margin-left: 56px;
+            margin-top: 30px;
+            color: black;
+        }
+
+        .sizeOption{
+            width: 300px;
+            margin-top: 10px;
+            margin-left: 35px;
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .option3{
+            height: 30px;
+            width: 100px;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px;
+        }
+
+        .option_3{
+            margin-top: 30px;
+            margin-left: 35px;
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 33px;
+        }
+
+        #option_1{
+            height: 30px;
+            width: 155px;
+            text-align: center;
+            line-height: 30px;
+            border-bottom: 2px blue solid;
+        }
+
+        #option_2{
+            height: 30px;
+            width: 155px;
+            text-align: center;
+            line-height: 30px;
+            border-bottom: 2px rgba(0, 0, 0, 0.3) solid;
+        }
+
+        #option_3{
+            height: 30px;
+            width: 155px;
+            text-align: center;
+            line-height: 30px;
+            border-bottom: 2px rgba(0, 0, 0, 0.3) solid;
+        }
+
+        .item{
+            margin-top: 20px;
+            margin-right: 80px;
+            color: black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .img2{
+            height: 100px;
+            width: 100px;
+        }
+
+        #img2{
+            height: 220px;
+            width: 150px;
+            margin-right: 80px;
+        }
+
+        .text{
+            width: 200px;
+            text-align: center;
+
+        }
+
+        #minText{
+            font-size: 12px;
+        }
+
+        .hidden{
+            margin-left: 250px;
+            width: 150px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .hiddenText{
+            margin-left: 250px;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin-top: 32px;
+        }
+
+        .overlap{
+            position: relative;
+            top: -113px;
+            left: -20%;
+            margin-left: 250px;
+            width: 900px;
+            height: 80px;
+            text-align: center;
+            line-height: 40px;
+            margin-top: 50px;
+            display: flex;
+            background-color: white;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #minimg{
+            height: 75px;
+            width: 45px;
+            padding-top: 2px;
+            margin-left: 50px;
+        }
+
+        .overText{
+            font-size: 20px;
+            /* padding-top: 10px; */
+            margin-left: 25px;
+        }
+
+        .lastText{
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .add{
+            height: 30px;
+            width: 100px;
+            /* text-align: center; */
+            line-height: 30px;
+            border-radius: 10px;
+            margin-top: 8px;
+            margin-left: 40px;
+        }
+
+        .plus{
+            height: 20px;
+            width: 20px;
+            font-size: 1.5rem;
+            color: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            padding-top: 0%;
+            padding: 3px;
+            padding-bottom: 8px;
+            margin-left: 30px;
+        }
+
+    .money{
+        height: 30px;
+        width: 100px;
+        line-height: 30px;
+        border-radius: 10px;
+        padding-top: 30px;
+        margin-left: 150px;
+        font-size: 20px;
+    }
+
+    .button button{
+        height: 35px;
+        width: 150px;
+        line-height: 30px;
+        background-color: blue;
+        border-radius: 3px;
+        border: 0px;
+        color: aliceblue;
+        margin-top: 25px;
+    }
+
+    .notifacation{
+        position: relative;
+        top: -17%;
+        left: 2%;
+        height: 10px;
+        width: 16px;
+        background-color: rgb(1, 198, 198);
+        border-radius: 30%;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        
+        <div class="left">
+            
+            <div class="icon"><img id="bars" src="./img/bars-solid.svg"></div>
+            <div class="icon"><img id="glass" src="./img/magnifying-glass-solid.svg"></div>
+
+            <div class="bigImg">
+                <img id="bigImg" src="./img/minato-namikaze-hokage-cloak-jfuobfm4cpmvvg0x.jpg" alt="">
+            </div>
+
+            <div class="icon"><img id="useer" src="./img/user-solid.svg"></div>
+            <div class="icon"><img  id="boat" src="./img/sailboat-solid.svg"></div>
+
+        </div>
+
+        <div class="right">
+            
+            <div class="back">&leftarrow;Back to bedroom</div>
+
+            <div class="lightText">BEDROOM</div>
+
+            <div class="colleg"><h2>College Essentials</h2></div>
+
+            <div class="div"> <div class="stars">&bigstar;&bigstar;&bigstar;&bigstar;&star;</div> 4.4( 328reviews )</div>
+
+            <div class="quality">Select Quality</div>
+
+            <div class="select"><div class="basic">Basic</div> <div class="prim">Premium</div></div>
+
+            <div class="style">Style</div>
+
+            <div class="styleOption">
+                <div class="option">Minimal</div>
+                <div class="option">abcd</div>
+                <div class="option">abcd</div>
+                <div class="option">Other</div>
+            </div>
+
+            <div class="color">color</div>
+
+            <div class="colorOption">
+                <div class="option2" id="colr1"></div>
+                <div class="option2" id="colr2"></div>
+                <div class="option2" id="colr3"></div>
+                <div class="option2" id="colr4"></div>
+            </div>
+
+            <div class="size">Size</div>
+
+            <div class="sizeOption">
+                <div class="option3">XL</div>
+                <div class="option3">Full</div>
+            </div>
+
+            <div class="option_3">
+                <div id="option_1">What's inside</div>
+                <div id="option_2">Reviews</div>
+                <div id="option_3">FAQs</div>
+            </div>
+
+            <div class="item">
+                <div class="img2"><img src="./download (3).jpg" id="img2"></div>
+                <div class="text"><p>Blush plush comfort</p><p id="minText">see product details</p></div>
+            </div>
+
+            <div class="hidden">go to hell</div>
+
+            <div class="hiddenText">lord Fourth Hokage</div>
+
+        </div>
+            
+        <div class="overlap">
+       
+               <div class="minimg"><img src="./img/b8fd821c02183a8d19765c9362bf2465.jpg" id="minimg"></div>
+       
+                <div class="overText">College Essentials <div class="lastText">Every thing you from freshman year</div></div>
+       
+                <div class="add">Add Ones <div class="plus">+</div></div>
+
+                <div class="money">$195</div>
+
+                <div class="button"><button type="button">Add to cart (2)</button></div>
+       
+            </div>
+
+            <div class="notifacation">12</div>
+
+
+</body>
+</html>
